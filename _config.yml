@@ -15,6 +15,15 @@ kramdown:
   syntax_highlighter: rouge
   math_engine: null # disable math engine and let the client side use KaTeX for simple LaTeX
 
+katex:
+  macros:
+    "\\MyGlobalMacro": "\\LaTeX"
+  delimiters:
+    - { left: "$", right: "$", display: false }
+    - { left: "$$", right: "$$", display: true }
+    - { left: "\\(", right: "\\)", display: false }
+    - { left: "\\[", right: "\\]", display: true }
+
 antex:
   url_path_prefix: *baseurl
   aliases: # disable most aliases and use server side AnTeX only for complex LaTeX
