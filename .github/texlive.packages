@@ -1,0 +1,3 @@
+latexmk
+dvisvgm
+commutative-diagrams
