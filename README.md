@@ -12,7 +12,17 @@ I hope this affords you to reproduce that, with ideas instead of wine.
 
 ## Getting started
 
-TODO
+1. Click [`Use this template`][krater-generate-url] here or at the top of this page.
+2. Pick a name for your new repo and create it.
+3. Wait for the first build to become green; you can observe its status at `> Actions > publish`.
+4. Enable GitHub Pages on branch `gh-pages` and folder `/`; you can reach the configuration panel at `> Settings > Pages`.
+
+That's it! Your website is now visible at `https://<USER_NAME>.github.io/<REPO_NAME>/`
+
+You can now start building it just like any other [Jekyll][jekyll-url] website.
+
+[krater-generate-url]: https://github.com/paolobrasolin/krater/generate
+[jekyll-url]: https://jekyllrb.com/
 
 ## Usage
 
