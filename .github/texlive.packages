@@ -2,3 +2,4 @@ latexmk
 dvisvgm
 commutative-diagrams
 standalone
+xypic
