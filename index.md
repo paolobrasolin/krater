@@ -6,7 +6,7 @@ katex:
 antex:
   preamble: >-
     \usepackage{amsmath,amsfonts}
-    \usepackage{commutative-diagrams}
+    \usepackage[all]{xy}
 ---
 
 **Welcome to `krater`!**
@@ -39,9 +39,9 @@ $$ F([n]) = \coprod*{i=1}^n F([1]) = \coprod*{i=1}^n X = [n] \otimes X $$
 A pretty diagram:
 
 {% tex classes: [antex, display] %}
-\begin{codi}
-\obj{ A & B \\ C & D \\ };
-\mor A -> B -> D;
-\mor A -> C -> D;
-\end{codi}
+$
+\xymatrix{ A\ar[r]^f \ar[d]_f & B \ar[dl]|{\hole\mathrm{id}_B\hole} \ar[d]^g \\ C \ar[r]_g & D}
+\qquad
+\xymatrix{ A\ar[r]^f \ar[d]_{g\circ f} & B \ar[dl]|{\hole g\hole} \ar[d]^{h\circ g} \\ B \ar[r]_h & C}
+$
 {% endtex %}

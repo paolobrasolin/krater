@@ -35,6 +35,9 @@ jobs:
           packages-path: ${{ github.workspace }}/.github/texlive.packages
           profile-path: ${{ github.workspace }}/.github/texlive.profile
 
+      - name: Debug
+        run: dvisvgm -V1
+
       - name: Cache anTeX artifacts
         uses: actions/cache@v2
         with:

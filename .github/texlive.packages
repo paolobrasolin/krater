@@ -1,3 +1,4 @@
 latexmk
 dvisvgm
 commutative-diagrams
+standalone
