@@ -49,19 +49,47 @@ Let's review some common tasks now.
 
 ### Running on your machine
 
+You will need a running LaTeX installation, including `latexmk`, `dvisvgm` and whatever engine and packages you plan on using.
+Chances are that if you're reading this you already have everything you need.
+
+You will need to [install Ruby][ruby-install-url].
+
+After that, you can simply
+
+```bash
+# install dependencies
+bundle
+# run Jekyll
+bundle exec jekyll serve
+```
+
+and your website will be available at `http://127.0.0.1:4000/<REPO_NAME>/`.
+
+[ruby-install-url]: https://www.ruby-lang.org/it/documentation/installation/
+
 ### Configuring CI
 
-### Kickstarting a blog
+The CI workflow uses [this action][setup-texlive-action-url] to setup TeX Live.
+If you require some less than common packages, just add them to the list in `.github/texlive.packages` and push to the repo.
+You can also change the scheme in `.github/texlive.profile` but I strongly advice against that if you're not sure what you're doing.
 
-### Kickstarting a course
+[setup-texlive-action-url]: https://github.com/paolobrasolin/setup-texlive-action
 
-### Kickstarting a book
+### Kickstarting a blog/course/book
+
+If you're familiar with Jekyll, you can proceed as usual.
+If you're not, all common tutorials apply.
+
+If there's interest in some examples or a more specific template, HMU!
 
 ### Plugins customization
 
-It also installs [all Jekyll plugins available in GitHub Pages][ghp-jekyll-plugins-url] with the `github-pages` gem in `Gemfile`.
+`krater` installs [all Jekyll plugins available in GitHub Pages][ghp-jekyll-plugins-url] via the `github-pages` gem in the `Gemfile`.
 This will help you if you're used to the standard features of GitHub Pages.
-You can add any other [Jekyll plugins][jekyll-plugins-url] you need.
+
+If you wish, you can be more selective and cherry pick only the plugins you need.
+
+You can also any other [Jekyll plugins][jekyll-plugins-url] you need: the build process runs in custom CI action and the usual limitations of GitHub Pages do not apply.
 
 [ghp-jekyll-plugins-url]: https://pages.github.com/versions/
 [jekyll-plugins-url]: https://jekyllrb.com/docs/plugins/
