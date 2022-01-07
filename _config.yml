@@ -33,3 +33,22 @@ antex:
 
 plugins:
   - jekyll-feed
+
+exclude:
+  # non default values:
+  - README.md
+  - krater.png
+  # default values:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+include:
+  - .nojekyll # tells GHP not to run Jekyll again on the build

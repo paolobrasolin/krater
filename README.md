@@ -68,6 +68,28 @@ and your website will be available at `http://127.0.0.1:4000/<REPO_NAME>/`.
 
 [ruby-install-url]: https://www.ruby-lang.org/it/documentation/installation/
 
+### Local deployment
+
+You might have reasons to build and deploy your website on your machine instead of using CI.
+
+That's ok, and also pretty simple.
+
+1. Disable the CI by deleting the `.github` folder and its contents.
+2. Checkout a worktree based on the `gh-pages` branch inside the `_site` folder:
+   ```bash
+   git worktree add -B gh-pages _site origin/gh-pages
+   ```
+
+This makes it so that that the `gh-pages` branch (where the site must be deployed) will be directly accessible from the `_site` folder (where the site is built locally).
+
+To deploy you can now just `cd` into `_site`, add your files, commit and push!
+
+In case you want to undo this setup, this is the elegant way:
+
+```bash
+git worktree remove -f _site
+```
+
 ### Configuring CI
 
 The CI workflow uses [this action][setup-texlive-action-url] to setup TeX Live.
