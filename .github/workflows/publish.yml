@@ -46,7 +46,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: .antex-cache
-          key: antex-cache-
+          key: antex-cache-${{ hashFiles('.github/texlive.packages', '.github/texlive.profile') }}
           restore-keys: antex-cache-
 
       - name: Build
