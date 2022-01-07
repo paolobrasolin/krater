@@ -12,6 +12,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Install system dependencies
+        run: sudo apt-get install -y ghostscript
+        # jekyll-antex -> antex -> dvisvgm -> ghostscript
+
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
         with:
